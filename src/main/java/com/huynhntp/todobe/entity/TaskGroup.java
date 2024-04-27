@@ -4,13 +4,14 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 @Entity
 @Table(name = "task_group")
 @Accessors(chain = true)
 @Data
-public class TaskGroup {
+public class TaskGroup implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -25,6 +26,5 @@ public class TaskGroup {
 
     @Column(name = "account_id", length = 255)
     private String accountId;
-
 
 }

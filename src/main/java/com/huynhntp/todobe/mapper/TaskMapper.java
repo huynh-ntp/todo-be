@@ -4,7 +4,7 @@ import com.huynhntp.todobe.dto.TaskDTO;
 import com.huynhntp.todobe.entity.Task;
 import org.mapstruct.Mapper;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface TaskMapper {
 
     Task toEntity(TaskDTO taskDTO);

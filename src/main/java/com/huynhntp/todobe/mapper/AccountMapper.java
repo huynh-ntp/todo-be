@@ -2,6 +2,6 @@ package com.huynhntp.todobe.mapper;
 
 import org.mapstruct.Mapper;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface AccountMapper {
 }

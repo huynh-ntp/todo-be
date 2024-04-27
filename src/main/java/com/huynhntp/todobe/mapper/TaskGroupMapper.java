@@ -4,7 +4,7 @@ import com.huynhntp.todobe.dto.TaskGroupDTO;
 import com.huynhntp.todobe.entity.TaskGroup;
 import org.mapstruct.Mapper;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface TaskGroupMapper {
 
     TaskGroup toEntity(TaskGroupDTO taskGroupDTO);

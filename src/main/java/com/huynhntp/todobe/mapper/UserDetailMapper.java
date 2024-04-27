@@ -4,7 +4,7 @@ import com.huynhntp.todobe.dto.UserDetailDTO;
 import com.huynhntp.todobe.entity.UserDetail;
 import org.mapstruct.Mapper;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface UserDetailMapper {
     UserDetail toEntity(UserDetailDTO userDetailDTO);
 

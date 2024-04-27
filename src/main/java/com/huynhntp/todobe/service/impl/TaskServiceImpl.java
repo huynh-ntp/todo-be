@@ -9,27 +9,25 @@ import com.huynhntp.todobe.repository.TaskRepository;
 import com.huynhntp.todobe.service.TaskGroupService;
 import com.huynhntp.todobe.service.TaskService;
 import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class TaskServiceImpl implements TaskService {
 
     //Repositories
+    @Autowired
     private TaskRepository taskRepository;
+    @Autowired
     private TaskGroupRepository taskGroupRepository;
 
     //Mappers
+    @Autowired
     private TaskMapper taskMapper;
 
     //Services
+    @Autowired
     private TaskGroupService taskGroupService;
-
-    public TaskServiceImpl(TaskRepository taskRepository, TaskGroupRepository taskGroupRepository, TaskMapper taskMapper, TaskGroupService taskGroupService) {
-        this.taskRepository = taskRepository;
-        this.taskGroupRepository = taskGroupRepository;
-        this.taskMapper = taskMapper;
-        this.taskGroupService = taskGroupService;
-    }
 
 
     @Override

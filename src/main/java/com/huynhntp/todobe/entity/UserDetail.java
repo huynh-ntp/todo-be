@@ -7,13 +7,14 @@ import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 @Entity
 @Table(name = "user_detail")
 @Data
 @Accessors(chain = true)
-public class UserDetail {
+public class UserDetail implements Serializable {
 
     @Id
     @Column(name = "id", nullable = false, length = 255)

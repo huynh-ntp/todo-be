@@ -4,11 +4,13 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
+import java.io.Serializable;
+
 @Entity
-@Table(name = "task")
-@Accessors(chain = true)
 @Data
-public class Task {
+@Accessors(chain = true)
+@Table(name = "task")
+public class Task implements Serializable {
 
     @Id
     @Column(name = "id", nullable = false, length = 255)
@@ -23,5 +25,4 @@ public class Task {
 
     @Column(name = "task_group_id", length = 255)
     private String taskGroupId;
-
 }

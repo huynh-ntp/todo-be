@@ -7,11 +7,13 @@ import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
+import java.io.Serializable;
+
 @Entity
 @Accessors(chain = true)
 @Table(name = "account")
 @Data
-public class Account {
+public class Account implements Serializable {
 
     @Id
     @Column(name = "id", nullable = false, length = 255)
