@@ -1,5 +1,6 @@
 package com.huynhntp.todobe.entity;
 
+import com.huynhntp.todobe.enums.TaskStatus;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.experimental.Accessors;
@@ -21,7 +22,8 @@ public class Task implements Serializable {
     private String description;
 
     @Column(name = "status", length = 255)
-    private String status;
+    @Enumerated(EnumType.STRING)
+    private TaskStatus status;
 
     @Column(name = "task_group_id", length = 255)
     private String taskGroupId;

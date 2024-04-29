@@ -1,9 +1,7 @@
 package com.huynhntp.todobe.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.huynhntp.todobe.enums.Role;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
@@ -25,10 +23,11 @@ public class Account implements Serializable {
     @Column(name = "password", length = 255)
     private String password;
 
-    @Column(name = "isactive")
-    private Boolean isActive;
+    @Column(name = "isActive")
+    private Boolean isActive = true;
 
     @Column(name = "role", length = 255)
-    private String role;
+    @Enumerated(EnumType.STRING)
+    private Role role;
 
 }

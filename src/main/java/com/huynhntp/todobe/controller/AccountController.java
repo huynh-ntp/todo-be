@@ -1,15 +1,15 @@
 package com.huynhntp.todobe.controller;
 
-import com.huynhntp.todobe.service.TaskGroupService;
+import com.huynhntp.todobe.service.AccountService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/api/v1/account")
 @AllArgsConstructor
-@RequestMapping(value = "/api/v1/taskGroup")
-public class TaskGroupController {
+public class AccountController {
 
-    private TaskGroupService taskGroupService;
+    private AccountService accountService;
 
 }
