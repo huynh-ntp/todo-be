@@ -1,5 +1,6 @@
 package com.huynhntp.todobe.entity;
 
+import com.huynhntp.todobe.entity.base.BaseEntity;
 import com.huynhntp.todobe.enums.TaskStatus;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -11,12 +12,7 @@ import java.io.Serializable;
 @Data
 @Accessors(chain = true)
 @Table(name = "task")
-public class Task implements Serializable {
-
-    @Id
-    @Column(name = "id", nullable = false, length = 255)
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private String id;
+public class Task extends BaseEntity implements Serializable {
 
     @Column(name = "description")
     private String description;

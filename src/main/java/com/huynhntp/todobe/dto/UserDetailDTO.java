@@ -10,7 +10,7 @@ import java.time.LocalDate;
 @Accessors(chain = true)
 public class UserDetailDTO  implements Serializable {
     private String id;
-    private String username;
+    private String accountId;
     private LocalDate dob;
     private String phone;
     private String avatarUrl;

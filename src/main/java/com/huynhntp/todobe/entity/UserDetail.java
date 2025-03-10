@@ -1,5 +1,6 @@
 package com.huynhntp.todobe.entity;
 
+import com.huynhntp.todobe.entity.base.BaseEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -14,14 +15,13 @@ import java.time.LocalDate;
 @Table(name = "user_detail")
 @Data
 @Accessors(chain = true)
-public class UserDetail implements Serializable {
+public class UserDetail extends BaseEntity implements Serializable {
 
-    @Id
-    @Column(name = "id", nullable = false, length = 255)
-    private String id;
+    @Column(name = "account_id", length = 255)
+    private String accountId;
 
-    @Column(name = "username", length = 255)
-    private String username;
+    @Column(name = "name")
+    private String name;
 
     @Column(name = "dob")
     private LocalDate dob;

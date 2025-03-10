@@ -1,5 +1,6 @@
 package com.huynhntp.todobe.entity;
 
+import com.huynhntp.todobe.entity.base.BaseEntity;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.experimental.Accessors;
@@ -11,12 +12,7 @@ import java.time.LocalDate;
 @Table(name = "task_group")
 @Accessors(chain = true)
 @Data
-public class TaskGroup implements Serializable {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    @Column(name = "id", nullable = false, unique = true, length = 255)
-    private String id;
+public class TaskGroup extends BaseEntity implements Serializable {
 
     @Column(name = "description")
     private String description;
