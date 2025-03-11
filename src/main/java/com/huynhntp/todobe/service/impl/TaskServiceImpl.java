@@ -26,14 +26,14 @@ import java.util.stream.Collectors;
 public class TaskServiceImpl implements TaskService {
 
     //Repositories
-    private TaskRepository taskRepository;
-    private TaskGroupRepository taskGroupRepository;
+    private final TaskRepository taskRepository;
+    private final TaskGroupRepository taskGroupRepository;
 
     //Mappers
-    private TaskMapper taskMapper;
+    private final TaskMapper taskMapper;
 
     //Services
-    private TaskGroupService taskGroupService;
+    private final TaskGroupService taskGroupService;
 
 
     @Override
